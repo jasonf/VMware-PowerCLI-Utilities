@@ -8,6 +8,6 @@ $vCenterCurrent = Read-Host "Name of the Current vCenter Server"
 
 Connect-VIServer $vCenterCurrent
 
-$datacenter = Menu (Get-Datacenter) "Select the datacenter to modify"
+$datacenter = Menu (Get-Datacenter | sort) "Select the datacenter to modify"
 
-$cluster = Menu (Get-Cluster) "Select the Cluster to modify"
+$cluster = Menu (Get-Cluster | sort ) "Select the Cluster to modify"
