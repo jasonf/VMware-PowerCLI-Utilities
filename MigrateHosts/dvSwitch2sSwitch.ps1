@@ -1,6 +1,9 @@
-Import-Module ..\Module\Common.psm1
+Import-Module ..\Modules\Common.psm1
 
 Disconnect-VIServer "*" -Force:$true
+
+cls
+
 $vCenterCurrent = Read-Host "Name of the Current vCenter Server"
 
 Connect-VIServer $vCenterCurrent
